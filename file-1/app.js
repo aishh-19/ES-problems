@@ -18,3 +18,42 @@ console.log(newArr)
 }
 let merge = mergedarr(fruits,vegetables);
 newArr(...merge);
+//
+
+//cloning function///
+
+const person = { name: "John", age: 30, address: "123 Main St" };
+let copy=(person)=>{
+return{...person};
+}
+let copyperson = copy(person);
+console.log(copyperson)
+
+
+//NEW OBJECT CREATION//
+const student = { name: "Alice", age: 20 };
+const course = { courseName: "Math", teacher: "Mr. Smith" };
+function merger(student , course){
+return {...student , ...course};
+// console.log(...course,...student);
+}
+let studentnew = merger(student , course);
+console.log(studentnew);
+
+//combining nested arr//
+const array1 = [
+    [1, 2],
+    [3, 4],
+    [5, 6],
+  ];
+  const array2 = [
+    [7, 8],
+    [9, 10],
+    [11, 12],
+  ];
+
+  let mergerarr12=(spreadarr1 ,spreadarr2)=>{
+let newarr12 = [...spreadarr1 , ...spreadarr2];
+console.log(newarr12);
+  }
+  mergerarr12(array1 , array2)
