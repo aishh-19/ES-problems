@@ -1,8 +1,8 @@
 const employees = [
-    { name: "John Doe", age: 30, department: "HR", salary: 50000 },
-    { name: "Jane Smith", age: 28, department: "Finance", salary: 60000 },
-    { name: "Alex Johnson", age: 35, department: "IT", salary: 70000 },
-  ];
+  { name: "John Doe", age: 30, department: "HR", salary: 50000 },
+  { name: "Jane Smith", age: 28, department: "Finance", salary: 60000 },
+  { name: "Alex Johnson", age: 35, department: "IT", salary: 70000 },
+];
   let highestPaid=(employees)=>{
     let [a , b, c] = employees;
     if(a.salary > b.salary && a.salary > c.salary){
@@ -15,3 +15,14 @@ return c
   }
 let highestSalary = highestPaid(employees);
 console.log("highest salary", highestSalary);
+
+//swaping//
+
+let destructuretoswap=(employees)=>{
+    let [a , b, c] = employees;
+let temp = a;
+a = c;
+c = temp;
+console.log(a , c);
+}
+destructuretoswap(employees);
